@@ -1,0 +1,16 @@
+name: "GitHub Branch-Version"
+description: "Use base version and add branch name to it if not master"
+inputs:
+  release-branch: # id of input
+    description: "Name of the release branch"
+    required: false
+    default: "master"
+  base-version: # id of input
+    description: "Base version of the product"
+    required: true
+outputs:
+  version: # id of output
+    description: "The version calculated"
+runs:
+  using: "node16"
+  main: "dist/index.js"
